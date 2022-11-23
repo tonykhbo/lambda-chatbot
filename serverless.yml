@@ -12,8 +12,8 @@ functions:
   listener: #name of function
     handler: handler.webhook
     url: true
-  environmentVariables:
-    WEBEX_CHATBOT_TOKEN: $WEBEX_CHATBOT_TOKEN
+    environment:
+      WEBEX_CHATBOT_TOKEN: $WEBEX_CHATBOT_TOKEN
 
 layers:
   lambda-chatbot:
@@ -26,7 +26,3 @@ layers:
     compatibleArchitectures:
       - x86_64
     retain: false
-
-package:
-  exclude:
-    - venv/** # virtualenv
