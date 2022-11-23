@@ -17,6 +17,9 @@ var/
 *.egg
 python
 requirementstxt-layer.zip
+package.json
+package-lock.json
+node_modules/
 
 # Serverless directories
 .serverless

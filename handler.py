@@ -3,6 +3,8 @@ import requests
 import pandas as pd
 
 TOKEN = os.environ['WEBEX_CHATBOT_TOKEN']
+SHEET_NAME = os.environ['SHEET_NAME']
+SHEET_ID = os.environ['SHEET_ID']
 
 def getMessage(event):
     print(event)
@@ -17,9 +19,9 @@ def getMessage(event):
     
 def checkCSV(messageDetails):
     user_input = messageDetails["text"]
-    SHEET_ID = '1LrhboEChYbmjTACMWDYlN0Q9fPKv9JodANNRo43OY8s'
-    SHEET_NAME = 'data'
-    url = f'https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={SHEET_NAME}'
+    csv_id = SHEET_ID
+    csv_sheet_name = SHEET_NAME
+    url = f'https://docs.google.com/spreadsheets/d/{csv_id}/gviz/tq?tqx=out:csv&sheet={csv_sheet_name}'
     df = pd.read_csv(url)
     #print(df.head())
     contactInfo = df[df["name"] == user_input]["ContactInfo"].iloc[0]

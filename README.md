@@ -7,6 +7,7 @@ This is a WebEx chatbot that leverages AWS Lambda functions to listen for messag
 Install serverless package via npm. We'll use this to deploy our functions to AWS Lambda.
 
 ```
+npm install dotenv
 npm install -g serverless
 ```
 Clone the repo
