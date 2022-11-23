@@ -22,7 +22,7 @@ layers:
     description: includes requests library
     compatibleRuntimes:
       - python3.8
-      - ptyhon3.9
+      - python3.9
     compatibleArchitectures:
       - x86_64
     retain: false
