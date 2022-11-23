@@ -8,21 +8,25 @@ provider:
   runtime: python3.9
 
 
+
 functions:
   listener: #name of function
     handler: handler.webhook
     url: true
     environment:
       WEBEX_CHATBOT_TOKEN: $WEBEX_CHATBOT_TOKEN
+    layers:
+      - !Ref RequirementstxtLambdaLayer
+      - arn:aws:lambda:us-east-1:336392948345:layer:AWSSDKPandas-Python39:1
 
 layers:
-  lambda-chatbot:
-    path: python/
-    name: requirementstxt-layer
-    description: includes requests library
-    compatibleRuntimes:
-      - python3.8
-      - python3.9
-    compatibleArchitectures:
-      - x86_64
-    retain: false
+    requirementstxt:
+      path: python/
+      name: requirementstxt-layer
+      description: includes requests library
+      compatibleRuntimes:
+        - python3.8
+        - python3.9
+      compatibleArchitectures:
+        - x86_64
+      retain: false

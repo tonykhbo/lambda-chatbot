@@ -15,6 +15,18 @@ Clone the repo
 git clone https://github.com/tonykhbo/lambda-chatbot.git
 ```
 
+Change directory to the project root 
+
+```
+cd lambda-chatbot
+```
+
+Pip install the requirements.txt file into a new folder named python in the base directory of the repo.
+
+```
+python3.9 -m pip install -r requirements.txt -t python
+```
+
 ### AWS Credentials Setup
 
 Follow the instructions in the following links to create an AWS Access Key: 
@@ -40,12 +52,6 @@ functions:
 ```
 
 ### Deploy
-
-Change directory to the project root 
-
-```
-cd lambda-chatbot
-```
 
 Deploy the functions to AWS Lambda:
 
