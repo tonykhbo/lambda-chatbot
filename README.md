@@ -65,6 +65,25 @@ Deploy the functions to AWS Lambda:
 serverless deploy
 ```
 
+### After Deployment
+
+Make sure to create the Webex Hook using the form here:
+
+https://developer.webex.com/docs/api/v1/webhooks/create-a-webhook
+
+In the form, next to Authorization, turn personal access token off. Enter the bot's access token here instead.
+
+Use the created function URL from your lambda function dashboard as the target URL for the Webex Hook. 
+
+Example: 
+
+```
+name: chatbot
+targetUrl: https://giass4zsdfsdf4tto75mbe0pjnjk.lambda-url.us-east-1.on.aws/
+resource: messages
+event: created
+```
+
 ### Modifying Environment variables after Deployment
 
     - Open the Functions page of the Lambda console.
