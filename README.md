@@ -2,7 +2,11 @@
 
 This is a WebEx chatbot that leverages AWS Lambda functions to listen for messages and responds to them.
 
+handler.py checks the google sheet for an existing row within the name column and responds with the corresponding value within the contactinfo column.
+
 ### Setup & Installation
+
+Obtain the google sheet id and the sheet name. Make sure the sheet is publically available for this testing. The sheet should have two columns, one for the name and one for the contact info.
 
 Install serverless package via npm. We'll use this to deploy our functions to AWS Lambda.
 
@@ -45,11 +49,12 @@ export AWS_SECRET_ACCESS_KEY=<your-secret-key-here>
 
 ### Set Environment Variables in .env file
 
-Modify the .env file: 
+Clone the .env.example as .env - then modify the .env file with your values: 
 
 ```
-functions:
-  WEBEX_CHATBOT_TOKEN=changethis_12345678abcdefg
+WEBEX_CHATBOT_TOKEN=123456abc
+SHEET_ID = '123456abc'
+SHEET_NAME = 'blah'
 ```
 
 ### Deploy
