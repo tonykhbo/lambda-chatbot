@@ -9,8 +9,9 @@ provider:
 
 
 functions:
-  listener:
+  listener: #name of function
     handler: handler.webhook
+    url: true
   environmentVariables:
     WEBEX_CHATBOT_TOKEN: $WEBEX_CHATBOT_TOKEN
 
