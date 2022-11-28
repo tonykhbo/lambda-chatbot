@@ -6,6 +6,8 @@ handler.py checks the google sheet for an existing row within the name column an
 
 ### Setup & Installation
 
+On the Webex website, setup an account, create a bot, and obtain a bot access token.
+
 Obtain the google sheet id and the sheet name. Make sure the sheet is publically available for this testing. The sheet should have two columns, one for the name and one for the contact info.
 
 Install serverless package via npm. We'll use this to deploy our functions to AWS Lambda.
