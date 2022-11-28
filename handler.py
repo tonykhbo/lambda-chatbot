@@ -28,7 +28,7 @@ def checkCSV(messageDetails):
     return contactInfo
 
 def postResponse(messageDetails, contactInfo):
-    if (messageDetails["personEmail"] != "vumi@webex.bot"):
+    if (messageDetails["personEmail"] != "vumi@webex.bot"): #need to change bot email and variablize it 
         url = "https://webexapis.com/v1/messages"
         headers = {
             "Authorization": "Bearer "+ TOKEN,
